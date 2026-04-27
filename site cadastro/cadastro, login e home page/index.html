@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTZ Barber - Agendamento</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>VT Barber </h2>
+                </div>
+                
+<ul class="nav-menu" id="navMenu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">Serviços</a></li>
+    <li><a href="#schedule">Agendar</a></li>
+    <li id="authLink">
+        <a href="login.html">Entrar</a>
+    </li>
+</ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Corte Perfeito, Estilo Único</h1>
+                <p>Agende seu horário na melhor barbearia da cidade</p>
+                <button class="cta-button" onclick="scrollToSchedule()">Agendar Agora</button>
+            </div>
+        </section>
+
+      
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">Nossos Serviços</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">✂️</div>
+                        <h3>Corte Clássico</h3>
+                        <p>R$ 30,00</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🪒</div>
+                        <h3>Barba Completa</h3>
+                        <p>R$ 10,00</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">💈</div>
+                        <h3>Corte + Barba</h3>
+                        <p>R$ 35,00</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🩸</div>
+                        <h3>Pigmentação</h3>
+                        <p>R$ 20,00</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">💇‍♀️</div>
+                        <h3>Luzes ou Reflexo</h3>
+                        <p>R$ 80,00</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">❄️</div>
+                        <h3>Nevou</h3>
+                        <p>R$ 100,00</p>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="schedule" class="schedule">
+            <div class="container">
+                <h2 class="section-title">Agende seu Horário</h2>
+                <form id="scheduleForm" class="schedule-form">
+                    <div class="form-group">
+                        <label for="name">Nome Completo *</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Telefone *</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="service">Serviço *</label>
+                            <select id="service" required>
+                                <option value="">Selecione um serviço</option>
+                                <option value="corte">Corte Clássico - R$ 30,00</option>
+                                <option value="barba">Barba Completa - R$ 10,00</option>
+                                <option value="combo">Corte + Barba - R$ 35,00</option>
+                                <option value="pigmentacao">Pigmentação - R$ 20,00</option>
+                                <option value="luzes">Luzes ou Reflexo - R$ 80,00</option>
+                                <option value="nevou">Nevou - R$ 100,00</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Data *</label>
+                            <input type="date" id="date" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="time">Horário *</label>
+                            <select id="time" required>
+                                <option value="">Selecione horário</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">Confirmar Agendamento</button>
+                </form>
+                <div id="message" class="message"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <p>&copy;  MTZ Barber. Todos os direitos reservados.</p>
+            <p>📍 276 Av. Luíz E. Magalhães | ☎️ +55 71 8100-2349</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
